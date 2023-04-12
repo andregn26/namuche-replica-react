@@ -4,7 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Layout from "./components/Layout/Layout";
 import SecondSection from "./components/SecondSection/SecondSection";
 import ThirdSection from "./components/ThirdSection/ThirdSection";
-import FourthSection from "./components/fourthSection/fourthSection";
+import FourthSection from "./components/FourthSection/FourthSection";
 
 function App() {
 	return (
