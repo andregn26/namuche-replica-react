@@ -10,10 +10,10 @@ function App() {
 	return (
 		<div className="App">
 			<Layout>
-				<Hero />
-				<SecondSection />
-				<ThirdSection />
-				<FourthSection />
+				{/* <Hero /> */}
+				{/* <SecondSection /> */}
+				{/* <ThirdSection /> */}
+				{/* <FourthSection /> */}
 			</Layout>
 		</div>
 	);

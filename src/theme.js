@@ -105,26 +105,57 @@ const font2 = "'Oswald', sans-serif;"
 themeSettings = createTheme(themeSettings, {
     typography: {
         fontFamily: font1,
+        fontSize: 'var(--fs-base)',
+        fs6xl: {
+            fontFamily: font2,
+            fontSize: 'var(--fs-6xl)',
+        },
+        fs5xl: {
+            fontFamily: font2,
+            fontSize: 'var(--fs-5xl)',
+        },
         h1: {
             fontFamily: font2,
+            fontSize: 'var(--fs-4xl)',
         },
         h2: {
             fontFamily: font2,
+            fontSize: 'var(--fs-xxxl)',
         },
         h3: {
             fontFamily: font2,
+            fontSize: 'var(--fs-xxl)',
         },
         h4: {
             fontFamily: font2,
+            fontSize: 'var(--fs-xl)',
         },
         h5: {
             fontFamily: font1,
+            fontSize: 'var(--fs-lg)',
         },
         h6: {
             fontFamily: font1,
+            fontSize: 'var(--fs-md)',
         },
         body1: {
             fontFamily: font1,
+            fontSize: 'var(--fs-base)',
+        },
+        body2: {
+            fontFamily: font1,
+            fontSize: 'var(--fs-sm)',
+        },
+    },
+    components: {
+        MuiTypography: {
+            defaultProps: {
+                variantMapping: {
+                    // Map the new variant to render a <span> by default
+                    fs5xl: 'p',
+                    fs6xl: "p",
+                },
+            },
         },
     },
 })

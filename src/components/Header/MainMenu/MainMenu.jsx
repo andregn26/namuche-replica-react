@@ -1,5 +1,5 @@
 import React from "react";
-import FlexBetween from "../../../HelpersComponents/FlexBetween";
+import FlexBetween from "../../HelpersComponents/FlexBetween";
 import { Box, Typography } from "@mui/material";
 
 const menuItems = [

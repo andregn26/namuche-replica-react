@@ -6,7 +6,10 @@ import Typography from "@mui/material/Typography";
 import CssBaseline from "@mui/material/CssBaseline";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import WidthContainer from "../../HelpersComponents/WidthContainer";
-import MainMenu from "./MainMenu/MainMenu";
+import MainMenu from "../MainMenu/MainMenu";
+import { useMediaQuery } from "@mui/material";
+import { Menu as MenuIcon } from "@mui/icons-material";
+import { IconButton } from "@mui/material";
 
 function ElevationScroll(props) {
 	const { children, window } = props;
@@ -24,7 +27,13 @@ function ElevationScroll(props) {
 	});
 }
 
-export default function ElevateAppBar(props) {
+export default function ElevateAppBar({
+	isSidebarOpen,
+	setIsSidebarOpen,
+	isTopOfPage,
+	props,
+}) {
+	const isNonMobile1000 = useMediaQuery("(min-width: 1000px)");
 	return (
 		<React.Fragment>
 			<CssBaseline />
@@ -36,7 +45,21 @@ export default function ElevateAppBar(props) {
 							sx={{ justifyContent: "space-between" }}
 						>
 							<Typography>Namuche</Typography>
-							<MainMenu />
+
+							{isNonMobile1000 && <MainMenu />}
+							{!isNonMobile1000 && (
+								<IconButton
+									onClick={() =>
+										setIsSidebarOpen(!isSidebarOpen)
+									}
+								>
+									<MenuIcon
+										sx={{
+											fontSize: "25px",
+										}}
+									/>
+								</IconButton>
+							)}
 						</Toolbar>
 					</WidthContainer>
 				</AppBar>
