@@ -35,7 +35,7 @@ const SecondSection = () => {
 				>
 					<Typography
 						variant="h1"
-						component="h5"
+						component="h3"
 						textAlign="center"
 						fontWeight="700"
 					>
@@ -43,7 +43,7 @@ const SecondSection = () => {
 					</Typography>
 					<Typography
 						variant="h1"
-						component="h5"
+						component="h3"
 						textAlign="center"
 						fontWeight="700"
 					>
@@ -51,7 +51,7 @@ const SecondSection = () => {
 					</Typography>
 					<Typography
 						variant="h1"
-						component="h5"
+						component="h3"
 						textAlign="center"
 						fontWeight="700"
 					>
