@@ -10,19 +10,39 @@ import Fade from "@mui/material/Fade";
 const socialIcons = [
 	{
 		tooltipTitle: "Instagram",
-		socialIconSVG: <InstagramIcon sx={{ width: "100%", height: "auto" }} />,
+		socialIconSVG: (
+			<InstagramIcon
+				aria-label="Instagram-icon"
+				sx={{ width: "100%", height: "auto" }}
+			/>
+		),
 	},
 	{
 		tooltipTitle: "LinkedIn",
-		socialIconSVG: <LinkedInIcon sx={{ width: "100%", height: "auto" }} />,
+		socialIconSVG: (
+			<LinkedInIcon
+				aria-label="LinkedIn-icon"
+				sx={{ width: "100%", height: "auto" }}
+			/>
+		),
 	},
 	{
 		tooltipTitle: "Blog",
-		socialIconSVG: <BookIcon sx={{ width: "100%", height: "auto" }} />,
+		socialIconSVG: (
+			<BookIcon
+				aria-label="Blog-icon"
+				sx={{ width: "100%", height: "auto" }}
+			/>
+		),
 	},
 	{
 		tooltipTitle: "Newsletter",
-		socialIconSVG: <MailIcon sx={{ width: "100%", height: "auto" }} />,
+		socialIconSVG: (
+			<MailIcon
+				aria-label="Newsletter-icon"
+				sx={{ width: "100%", height: "auto" }}
+			/>
+		),
 	},
 ];
 

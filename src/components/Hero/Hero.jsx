@@ -25,7 +25,7 @@ const Hero = () => {
 
 			<Typography
 				variant="h2"
-				component="h3"
+				component="h5"
 				sx={{
 					padding: "5rem 30% 10rem 0",
 				}}
