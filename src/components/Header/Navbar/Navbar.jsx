@@ -52,6 +52,7 @@ export default function ElevateAppBar({
 							{isNonMobile1000 && <MainMenu />}
 							{!isNonMobile1000 && (
 								<IconButton
+									aria-label="menu-button"
 									onClick={() =>
 										setIsSidebarOpen(!isSidebarOpen)
 									}
