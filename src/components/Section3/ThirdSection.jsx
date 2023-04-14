@@ -82,6 +82,8 @@ const ThirdSection = () => {
 						{slides.map((slide) => (
 							<SwiperSlide key={slide.index}>
 								<img
+									width="720px"
+									height="204px"
 									src={slide.image}
 									alt={`slide-img-${slide.index}`}
 								/>
