@@ -12,7 +12,7 @@ const FourthSection = () => {
 				<WidthCenterContainer>
 					<Typography
 						variant={isNonMobile ? "fs6xl" : "h1"}
-						component="h5"
+						component="h4"
 						textAlign="center"
 					>
 						Let's Work Together

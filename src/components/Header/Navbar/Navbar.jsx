@@ -46,12 +46,7 @@ export default function ElevateAppBar({
 							sx={{ justifyContent: "space-between" }}
 						>
 							<Box sx={{ maxWidth: "7rem", margin: "2rem" }}>
-								<img
-									src={NamucheLogo}
-									alt="namuche-logo"
-									width="1063"
-									height="206"
-								/>
+								<img src={NamucheLogo} alt="namuche-logo" />
 							</Box>
 
 							{isNonMobile1000 && <MainMenu />}
