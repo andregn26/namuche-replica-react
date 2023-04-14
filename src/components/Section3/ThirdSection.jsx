@@ -1,6 +1,6 @@
 import React from "react";
-import WidthContainer from "../HelpersComponents/WidthContainer";
-import PaddingContainer from "../HelpersComponents/PaddingContainer";
+import WidthCenterContainer from "../HelpersComponents/Containers/WidthCenterContainer";
+import PaddingContainer from "../HelpersComponents/Containers/PaddingContainer";
 import Beeq from "../../assets/img/beeq.png";
 import Famel from "../../assets/img/famel.png";
 import Garcias from "../../assets/img/garcias.png";
@@ -16,7 +16,7 @@ register();
 const ThirdSection = () => {
 	return (
 		<div>
-			<WidthContainer>
+			<WidthCenterContainer>
 				<PaddingContainer>
 					<swiper-container slides-per-view="3">
 						<swiper-slide lazy="true">
@@ -42,7 +42,7 @@ const ThirdSection = () => {
 						</swiper-slide>
 					</swiper-container>
 				</PaddingContainer>
-			</WidthContainer>
+			</WidthCenterContainer>
 		</div>
 	);
 };

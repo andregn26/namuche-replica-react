@@ -1,31 +1,58 @@
 import React from "react";
-import FlexBetween from "../../HelpersComponents/FlexBetween";
-import { Box, Typography } from "@mui/material";
+import FlexBetween from "../../HelpersComponents/Flex/FlexBetween";
+import { Box, Typography, useTheme } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
 const menuItems = [
 	{
-		name: "a agência",
+		name: "A Agência",
 	},
 	{
-		name: "os serviços",
+		name: "Os Serviços",
 	},
 	{
-		name: "os trabalhos",
+		name: "Os Trabalhos",
 	},
 	{
-		name: "a magazine",
+		name: "A Magazine",
 	},
 	{
-		name: "os contactos",
+		name: "Os Contactos",
 	},
 ];
 
 const MainMenu = () => {
+	const theme = useTheme();
+	const isNonMobile1000 = useMediaQuery("(min-width: 1000px)");
 	return (
 		<FlexBetween>
-			<Box sx={{ display: "flex", gap: "2rem" }}>
+			<Box
+				sx={
+					isNonMobile1000
+						? { display: "flex", gap: "2rem", padding: "1rem 0" }
+						: {
+								display: "flex",
+								flexDirection: "column",
+								gap: "2rem",
+								alignItems: "center	",
+						  }
+				}
+			>
 				{menuItems.map((item, index) => (
-					<Typography key={index} gap={2}>
+					<Typography
+						key={index}
+						gap={1.3}
+						variant={isNonMobile1000 ? "body2" : "h3"}
+						component="h3"
+						fontFamily="var(--ff-heading)"
+						sx={
+							isNonMobile1000
+								? { textShadow: "none" }
+								: {
+										textShadow: `1px 5px 3px ${theme.palette.primary[300]}}`,
+								  }
+						}
+					>
 						{item.name}
 					</Typography>
 				))}

@@ -1,19 +1,25 @@
 import React from "react";
-import PaddingContainer from "../HelpersComponents/PaddingContainer";
-import WidthContainer from "../HelpersComponents/WidthContainer";
+import WidthCenterContainer from "../HelpersComponents/Containers/WidthCenterContainer";
 import { Box } from "@mui/material";
-import FlexBetween from "../HelpersComponents/FlexBetween";
-import SocialIcons from "./SocialIcons/SocialIcons";
+import FlexBetween from "../HelpersComponents/Flex/FlexBetween";
+import SocialIconsGroup from "../00Layout/SocialIcons/SocialIconsGroup";
+import Inovflow from "../../assets/img/inovflow.png";
 
 const Footer = () => {
 	return (
-		<Box padding={"5rem 0 1rem 0"}>
-			<WidthContainer>
+		<Box padding={"1rem 0"}>
+			<WidthCenterContainer>
 				<FlexBetween>
-					<Box>Inovflow</Box>
-					<SocialIcons />
+					<Box sx={{ maxWidth: "6rem" }}>
+						<img src={Inovflow} alt="inovflow-log" />
+					</Box>
+					<SocialIconsGroup
+						gap="1rem"
+						justifyContent="flexBetween"
+						iconWidthHeight="1.5rem"
+					/>
 				</FlexBetween>
-			</WidthContainer>
+			</WidthCenterContainer>
 		</Box>
 	);
 };

@@ -1,19 +1,17 @@
-import { Box } from "@mui/material";
-import WidthContainer from "./components/HelpersComponents/WidthContainer";
+import Layout from "./components/00Layout/Layout";
 import Hero from "./components/Hero/Hero";
-import Layout from "./components/Layout/Layout";
-import SecondSection from "./components/SecondSection/SecondSection";
-import ThirdSection from "./components/ThirdSection/ThirdSection";
-import FourthSection from "./components/FourthSection/FourthSection";
+import SecondSection from "./components/Section2/SecondSection";
+import ThirdSection from "./components/Section3/ThirdSection";
+import FourthSection from "./components/Section4/FourthSection";
 
 function App() {
 	return (
 		<div className="App">
 			<Layout>
-				{/* <Hero /> */}
-				{/* <SecondSection /> */}
+				<Hero />
+				<SecondSection />
 				{/* <ThirdSection /> */}
-				{/* <FourthSection /> */}
+				<FourthSection />
 			</Layout>
 		</div>
 	);

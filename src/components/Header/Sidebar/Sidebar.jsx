@@ -13,11 +13,13 @@ import {
 	useTheme,
 } from "@mui/material";
 import { SettingsOutlined, ChevronRight } from "@mui/icons-material";
-import FlexBetween from "../../HelpersComponents/FlexBetween";
+import FlexBetween from "../../HelpersComponents/Flex/FlexBetween";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import MainMenu from "../MainMenu/MainMenu";
+import SocialIconsGroup from "../../00Layout/SocialIcons/SocialIconsGroup";
 
 const Sidebar = ({
 	drawerWidth,
@@ -51,8 +53,7 @@ const Sidebar = ({
 							width="100%"
 							height="100%"
 							sx={{
-								p: "1.5rem 2rem 2rem 3rem",
-								border: "solid red 3px",
+								p: "2rem 2rem",
 								display: "flex",
 								flexDirection: "column",
 								justifyContent: "space-between",
@@ -66,7 +67,11 @@ const Sidebar = ({
 									alignItems="center"
 									gap="0.5rem"
 								>
-									<Typography variant="h4" fontWeight="bold">
+									<Typography
+										variant="h3"
+										fontWeight="bold"
+										fontFamily="var(--ff-heading)"
+									>
 										Menu
 									</Typography>
 								</Box>
@@ -79,23 +84,24 @@ const Sidebar = ({
 								</IconButton>
 							</FlexBetween>
 							{/* Menu Actions Box */}
+							<Box
+								sx={{
+									display: "flex",
+									justifyContent: "center",
+								}}
+							>
+								<MainMenu />
+							</Box>
 							{/* Menu Footer Box */}{" "}
 							<Box>
 								<Divider />
-								<FlexBetween
-									textTransform="none"
-									// gap="1rem"
-									// m="1.5rem 2rem 2rem 3rem"
-									mt="2rem"
-									mb="1rem"
-								>
-									<Box display="flex" gap="2rem">
-										<FacebookOutlinedIcon />
-										<InstagramIcon />
-										<WhatsAppIcon />
-										<EmailOutlinedIcon />
-									</Box>
-								</FlexBetween>
+								<Box sx={{ margin: "2rem 0" }}>
+									<SocialIconsGroup
+										gap="3rem"
+										justifyContent="center"
+										iconWidthHeight="2rem"
+									/>
+								</Box>
 							</Box>
 						</Box>
 					</Drawer>

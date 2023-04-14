@@ -1,42 +1,39 @@
 import React from "react";
-import HeroImg from "../../assets/img/banner-1.png";
-import { Box, Typography } from "@mui/material";
-import WidthContainer from "../HelpersComponents/WidthContainer";
+import { Box, Typography, useTheme } from "@mui/material";
+import WidthCenterContainer from "../HelpersComponents/Containers/WidthCenterContainer";
+import ImgHero from "./ImgHero";
 
 const Hero = () => {
+	const theme = useTheme();
 	return (
-		<WidthContainer>
-			<Box
-				sx={{
-					position: "relative",
-				}}
-			>
-				<img className="hero-img " src={HeroImg} alt="hERO-IMG" />
-
-				<Typography
-					align="center"
-					variant="h1"
-					sx={{
-						margin: "0",
-						position: "absolute",
-						top: "50%",
-						left: "50%",
-						transform: "translate(-50%, -50%)",
-					}}
-				>
-					making brands happen
-				</Typography>
+		<WidthCenterContainer sx={{ mt: "1vh" }}>
+			<Box height="85vh">
+				<ImgHero>
+					<Typography
+						className="hero-backgroundImg-inside"
+						align="center"
+						variant="fs6xl"
+						component="h1"
+						sx={{
+							textShadow: `1px 3px 3px ${theme.palette.primary[300]}`,
+						}}
+					>
+						Making Brands Happen
+					</Typography>
+				</ImgHero>
 			</Box>
+
 			<Typography
-				variant="h3"
+				variant="h2"
+				component="h3"
 				sx={{
-					padding: "10rem 30% 10rem 0",
+					padding: "5rem 30% 10rem 0",
 				}}
 			>
 				Acreditamos nas marcas que são pessoas, trabalham com pessoas e
 				se focam em pessoas.
 			</Typography>
-		</WidthContainer>
+		</WidthCenterContainer>
 	);
 };
 
